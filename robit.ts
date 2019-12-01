@@ -190,10 +190,10 @@ namespace robit {
                 setPwm(1, STP_CHC_L, STP_CHC_H)
                 setPwm(2, STP_CHD_L, STP_CHD_H)
             } else {
-                setPwm(2, STP_CHA_L, STP_CHA_H)
+                setPwm(0, STP_CHA_L, STP_CHA_H)
                 setPwm(1, STP_CHB_L, STP_CHB_H)
-                setPwm(3, STP_CHC_L, STP_CHC_H)
-                setPwm(0, STP_CHD_L, STP_CHD_H)
+                setPwm(2, STP_CHC_L, STP_CHC_H)
+                setPwm(3, STP_CHD_L, STP_CHD_H)
             }
         }
         else {
@@ -203,10 +203,10 @@ namespace robit {
                 setPwm(5, STP_CHC_L, STP_CHC_H)
                 setPwm(6, STP_CHD_L, STP_CHD_H)
             } else {
-                setPwm(6, STP_CHA_L, STP_CHA_H)
+                setPwm(4, STP_CHA_L, STP_CHA_H)
                 setPwm(5, STP_CHB_L, STP_CHB_H)
-                setPwm(7, STP_CHC_L, STP_CHC_H)
-                setPwm(4, STP_CHD_L, STP_CHD_H)
+                setPwm(6, STP_CHC_L, STP_CHC_H)
+                setPwm(7, STP_CHD_L, STP_CHD_H)
             }
         }
     }
@@ -254,7 +254,7 @@ namespace robit {
         }
         setStepper(index, degree > 0)
         degree = Math.abs(degree)
-        basic.pause(10240 * degree / 360)
+        basic.pause(8500 * degree / 360)
         MotorStopAll()
     }
 
