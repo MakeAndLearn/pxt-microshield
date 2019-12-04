@@ -254,7 +254,7 @@ namespace robit {
         }
         setStepper(index, degree > 0)
         degree = Math.abs(degree)
-        basic.pause(8500 * degree / 360)
+        basic.pause(10240 * degree / 360)
         MotorStopAll()
     }
 
