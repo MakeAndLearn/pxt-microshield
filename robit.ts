@@ -111,7 +111,7 @@ namespace microshield {
           i2cwrite(PCA9685_ADDRESS, MODE1, oldmode | 0xa1)  //1010 0001
       }
       
-      function setPwm(channel: number, on: number, off: number): void {
+	function setPwm(channel: number, on: number, off: number): void {
         if (channel < 0 || channel > 15)
             return;
 
@@ -132,10 +132,10 @@ namespace microshield {
                 setPwm(1, STP_CHC_L, STP_CHC_H)
                 setPwm(3, STP_CHD_L, STP_CHD_H)
             } else {
-                setPwm(3, STP_CHA_L, STP_CHA_H)
+                setPwm(0, STP_CHA_L, STP_CHA_H)
                 setPwm(1, STP_CHB_L, STP_CHB_H)
                 setPwm(2, STP_CHC_L, STP_CHC_H)
-                setPwm(0, STP_CHD_L, STP_CHD_H)
+                setPwm(3, STP_CHD_L, STP_CHD_H)
             }
         }
         else {
@@ -145,10 +145,10 @@ namespace microshield {
                 setPwm(5, STP_CHC_L, STP_CHC_H)
                 setPwm(7, STP_CHD_L, STP_CHD_H)
             } else {
-                setPwm(7, STP_CHA_L, STP_CHA_H)
+                setPwm(4, STP_CHA_L, STP_CHA_H)
                 setPwm(5, STP_CHB_L, STP_CHB_H)
                 setPwm(6, STP_CHC_L, STP_CHC_H)
-                setPwm(4, STP_CHD_L, STP_CHD_H)
+                setPwm(7, STP_CHD_L, STP_CHD_H)
             }
         }
     }
