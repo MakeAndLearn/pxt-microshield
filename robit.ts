@@ -60,6 +60,11 @@ namespace microshield {
         M4 = 0x4
     }
 
+	export enum Steppers {
+        STEP1 = 0x1,
+        STEP2 = 0x2
+    }
+
     function i2cwrite(addr: number, reg: number, value: number) {
         let buf = pins.createBuffer(2)
         buf[0] = reg
