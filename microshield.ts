@@ -227,7 +227,7 @@ namespace microshield {
 	 * @param speed1 [-100-100] speed of motor; eg: 50
 	 * @param motor_right describe parameter here, eg: 2
 	 * @param speed2 [-100-100] speed of motor; eg: 50
-	*/
+	
     //% blockId=microshield_motor_dual block="Left wheel %motor1|speed %speed1|Right wheel %motor2|speed %speed2"
     //% weight=84
     //% speed1.min=-100 speed1.max=100
@@ -239,7 +239,7 @@ namespace microshield {
         MotorRun(motor_left, speed1 / 2 * 5);   //100 map to 255
         MotorRun(motor_right, speed2 / 2 * 5);
     }
-
+*/
     //% blockId=microshield_stop block="Motor Stop|%index|"
     //% weight=80
     export function MotorStop(index: Motors): void {
