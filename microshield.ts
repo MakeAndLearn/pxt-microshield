@@ -168,7 +168,6 @@ namespace microshield {
 	*/
     //% blockId=microshield_servo block="Servo|%index|degree %degree"
     //% weight=100
-    //% advanced=true
     //% blockGap=50
     //% degree.min=0 degree.max=180
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -184,7 +183,6 @@ namespace microshield {
     
     //% blockId=microshield_stepper_degree block="Stepper|%index|degree %degree"
     //% weight=90
-    //% advanced=true
     export function StepperDegree(index: Steppers, degree: number): void {
         if (!initialized) {
             initPCA9685()
@@ -198,7 +196,6 @@ namespace microshield {
     //% blockId=microshield_motor_run block="%index |Wheel|speed %speed "
     //% weight=85
     //% speed.min=-100 speed.max=100
-    //% advanced=true
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function MotorRun(index: Motors, speed: number): void {
         if (!initialized) {
