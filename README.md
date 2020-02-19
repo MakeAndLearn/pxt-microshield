@@ -18,6 +18,7 @@ This module can be programmed with python, as well. Make&Learn have developed a 
 </p>
 
 ### Javascript
+```JavaScript
 input.onGesture(Gesture.Shake, function () {
     microshield.Servo(microshield.Servos.S7, 180)
     basic.pause(100)
@@ -38,6 +39,7 @@ microshield.Servo(microshield.Servos.S7, 90)
 basic.forever(function () {
 	
 })
+```
 
 ## License
 MIT
