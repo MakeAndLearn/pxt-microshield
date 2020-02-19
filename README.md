@@ -2,7 +2,7 @@
 This micro:bit micro:shield package was developed by Make&Learn (https://www.makeandlearn.cat/).
 
 
-[]! https://drive.google.com/open?id=1_XJCj9cGwC1DOLLJwOA1FXn5mJt_GuEl
+![Image of micro:shield](https://drive.google.com/open?id=1_XJCj9cGwC1DOLLJwOA1FXn5mJt_GuEl)
 
 
 This module, micro:shield, is specifically designed for education in order to offer a flexible board where you can connect so many components of many kinds, especially the ones that the educational community uses more frequently.
