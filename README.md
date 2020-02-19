@@ -12,6 +12,9 @@ It can be purchased through the Make&Learn's online shop (https://botiga.makeand
 This module can be programmed with python, as well. Make&Learn have developed a set of libraries for specific components like  DC motors, servos, steppers and sonar sensor. They can be found at this link: https://github.com/MakeAndLearn/python_microbit_libraries
 
 ## Example of use
+<p align="center">
+  <img src="https://github.com/MakeAndLearn/pxt-microshield/blob/master/Makecode_microshield_example.png">
+</p>
 
 ## License
 MIT
