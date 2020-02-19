@@ -9,12 +9,9 @@ This module, micro:shield, is specifically designed for education in order to of
 
 It can be purchased through the Make&Learn's online shop (https://botiga.makeandlearn.cat/producto/microshield)
 
-## Example of use
-
-
-
-
 This module can be programmed with python, as well. Make&Learn have developed a set of libraries for specific components like  DC motors, servos, steppers and sonar sensor. They can be found at this link: https://github.com/MakeAndLearn/python_microbit_libraries
+
+## Example of use
 
 ## License
 MIT
