@@ -1,4 +1,5 @@
-//% color=#FFAD5A weight=10 icon="\uf544"
+//% color=#FFAD5A weight=10 icon="\uf916"
+
 namespace microshield {
 
     const PCA9685_ADDRESS = 0x40
