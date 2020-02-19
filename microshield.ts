@@ -221,7 +221,7 @@ namespace microshield {
         }
     }
     
-    //% blockId=microshield_stop block="Stop motor|%index|"
+    //% blockId=microshield_stop block="Stoppp motor|%index|"
     //% weight=80
     export function MotorStop(index: Motors): void {
         MotorRun(index, 0);
