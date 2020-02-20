@@ -1,4 +1,4 @@
-//% color=#FFAD5A weight=10 icon="\uf544"
+//% color=#FFAD5A weight=10 icon="\f544"
 
 namespace microshield {
 
