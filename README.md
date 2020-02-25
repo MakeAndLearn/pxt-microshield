@@ -16,6 +16,19 @@ This module can be programmed with python, as well. Make&Learn have developed a 
 ## Basic usage
 
 ```blocks
+let strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB_RGB)
+while (true) {
+    let x = input.acceleration(Dimension.X) / 2;
+    let y = input.acceleration(Dimension.Y) / 2;
+    let z = input.acceleration(Dimension.Z) / 2;
+    strip.shift(1);
+    strip.setPixelColor(0, neopixel.rgb(x, y, -z));
+    strip.show();
+    basic.pause(100);
+}
+```
+
+```blocks
 input.onGesture(Gesture.Shake, function () {
     microshield.Servo(microshield.Servos.S7, 180)
     basic.pause(100)
