@@ -10,30 +10,31 @@ This module, micro:shield, is specifically designed for education in order to of
 ## Example of use
 
 ```blocks
-// When the micro:bit is shaken, drive a servo to 180 degrees and 
-// then 90 degrees
-input.onGesture(Gesture.Shake, function () {
-    microshield.Servo(microshield.Servos.S7, 180)
-    basic.pause(100)
-    microshield.Servo(microshield.Servos.S7, 90)
-})
-// On Button A pressed...TODO
+// On Button A pressed, turn the stepper motor 1 45 degrees and 
+// run counterclockwise the motor DC 1 and 3 at maximum speed
 input.onButtonPressed(Button.A, function () {
     microshield.StepperDegree(microshield.Steppers.STEP1, 45)
-    microshield.StepperDegree(microshield.Steppers.STEP2, -45)
-    microshield.MotorRun(microshield.Motors.M4, 100)
+    microshield.MotorRun(microshield.Motors.M1, -100)
+    microshield.MotorRun(microshield.Motors.M3, -100)
 })
-// On Button B pressed...TODO
+// On Button B pressed, turn the stepper motor 1 -45 degrees and 
+// run clockwise the motor DC 1 and 3 at maximum speed
 input.onButtonPressed(Button.B, function () {
-    microshield.StepperDegree(microshield.Steppers.STEP1, -90)
-    microshield.StepperDegree(microshield.Steppers.STEP2, 90)
-    microshield.MotorRun(microshield.Motors.M4, -100)
+    microshield.StepperDegree(microshield.Steppers.STEP1, -45)
+    microshield.MotorRun(microshield.Motors.M1, 100)
+    microshield.MotorRun(microshield.Motors.M3, 100)
 })
-// Forever loop...TODO
-microshield.MotorStop(microshield.Motors.M4)
-microshield.Servo(microshield.Servos.S7, 90)
-basic.forever(function () {
-	
+// On Button A and B pressed, turn off the motors DC 1 and 3
+input.onButtonPressed(Button.AB, function () {
+    microshield.MotorStop(microshield.Motors.M1)
+    microshield.MotorStop(microshield.Motors.M3)
+})
+
+// When the micro:bit is shaken, drive a servo to 180 degrees and then 90 degrees
+input.onGesture(Gesture.Shake, function () {
+    microshield.Servo(microshield.Servos.S3, 0)
+    basic.pause(1000)
+    microshield.Servo(microshield.Servos.S3, 20)
 })
 ```
 
