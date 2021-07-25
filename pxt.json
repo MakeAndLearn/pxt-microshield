@@ -1,7 +1,7 @@
 {
-    "name": "didacbot",
-    "version": "0.1",
-    "description": "MAKE&LEARN Didacbot",
+    "name": "microshield",
+    "version": "1.0.1",
+    "description": "MAKE&LEARN microshield",
     "license": "MIT",
     "dependencies": {
         "core": "*",
@@ -9,11 +9,11 @@
     },
     "files": [
         "README.md",
-        "didacbot.ts"
+        "microshield.ts"
     ],
     "testFiles": [
         "tests.ts"
     ],
     "public": true,
-    "installedVersion": "github:MakeAndLearn/pxt-didacbot#v0.1"
+    "installedVersion": "github:MakeAndLearn/pxt-microshield#v1.0.1"
 }
