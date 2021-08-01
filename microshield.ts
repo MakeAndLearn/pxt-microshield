@@ -158,6 +158,17 @@ namespace microshield {
         setPwm((index - 1) * 2, 0, 0)
         setPwm((index - 1) * 2 + 1, 0, 0)
     }
+	
+	function MotorStopAll() {
+		setPwm(2, 0, 0)
+        setPwm(1, 0, 0)
+        setPwm(3, 0, 0)
+        setPwm(0, 0, 0)
+        setPwm(6, 0, 0)
+        setPwm(5, 0, 0)
+        setPwm(7, 0, 0)
+        setPwm(4, 0, 0)
+	}
     
     //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -182,15 +193,20 @@ namespace microshield {
         setPwm(index + 7, 0, value)
     }
     
-    //% blockId=microshield_stepper_degree block="Stepper|%index|turn|%degree|º"
+    //% blockId=microshield_stepper block="Stepper|%index| turn|%num|%unit|"
     //% weight=90
-    export function StepperDegree(index: Steppers, degree: number): void {
+    export function Stepper(index: Steppers, num: number, unit: stepUnit): void {
         if (!initialized) {
             initPCA9685()
         }
-        setStepper(index, degree > 0)
-        degree = Math.abs(degree)
-        basic.pause(10240 * degree / 360)
+		setStepper(index, num > 0)
+       	num = Math.abs(num)
+		
+		switch (unit) {
+                case stepUnit.Rotations: basic.pause(10750 * num)
+                case stepUnit.Degrees: basic.pause(10750 * num / 360)
+            }
+		
         MotorStopAll()
     }
     
@@ -226,12 +242,5 @@ namespace microshield {
     //% weight=80
     export function MotorStop(index: Motors): void {
         MotorRun(index, 0);
-    }
-
-
-    export function MotorStopAll(): void {
-        for (let idx = 1; idx <= 4; idx++) {
-            stopMotor(idx);
-        }
     }
 }
