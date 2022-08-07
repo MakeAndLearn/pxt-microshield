@@ -1,11 +1,12 @@
 {
     "name": "microshield",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "MAKE&LEARN microshield",
     "license": "MIT",
     "dependencies": {
         "core": "*",
-	"NeoPixel": "github:microsoft/pxt-neopixel"
+	"NeoPixel": "github:microsoft/pxt-neopixel",
+	"sonar": "github:microsoft/pxt-sonar"
     },
     "files": [
         "README.md",
@@ -15,5 +16,5 @@
         "tests.ts"
     ],
     "public": true,
-    "installedVersion": "github:MakeAndLearn/pxt-microshield#v1.0.1"
+    "installedVersion": "github:MakeAndLearn/pxt-microshield#v1.0.2"
 }
