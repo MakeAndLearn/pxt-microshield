@@ -33,7 +33,7 @@ namespace microshield {
     
     const on = 0
     const off = 0
-    const freq_hz = 60
+    const freq_hz = 50
     
     let initialized = false
     let matBuf = pins.createBuffer(17);
@@ -94,7 +94,7 @@ namespace microshield {
     
     function initPCA9685(): void {
         i2cwrite(PCA9685_ADDRESS, MODE1, 0x00)
-        setFreq(50); //1s / 20ms
+        setFreq(freq_hz); //1s / 20ms
         for (let idx = 0; idx < 16; idx++) {
             setPwm(idx, 0, 0);
         }
